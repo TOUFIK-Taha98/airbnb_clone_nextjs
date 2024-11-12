@@ -6,7 +6,7 @@ import Navbar from "@/app/components/header/Navbar";
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md py-4">
-      <div className="container grid grid-cols-3">
+      <div className="container grid grid-cols-3 relative">
         <Link href={"/"} className="relative flex items-center h-10 my-auto">
           <Image
             alt="logo-img"
