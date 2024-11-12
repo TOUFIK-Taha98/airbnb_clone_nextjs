@@ -3,7 +3,7 @@ import Link from "next/link";
 import SearchBar from "@/app/components/header/SearchBar";
 import Navbar from "@/app/components/header/Navbar";
 
-const Header = () => {
+const Header = ({ placeholder }: { placeholder?: string }) => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md py-4">
       <div className="container grid grid-cols-3 relative">
@@ -17,7 +17,7 @@ const Header = () => {
             className="object-contain object-left"
           />
         </Link>
-        <SearchBar />
+        <SearchBar placeholder={placeholder} />
         <Navbar />
       </div>
     </header>

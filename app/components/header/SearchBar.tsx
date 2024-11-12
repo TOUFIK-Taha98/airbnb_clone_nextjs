@@ -57,7 +57,14 @@ const Searchbar = ({ placeholder }: { placeholder?: string }) => {
             <button type="button" className="flex-grow text-gray-500">
               Cancel
             </button>
-            <Link href="/" className="flex-grow text-red-400">
+            <Link
+              href={{
+                pathname: "/search",
+                search: `?location=${input}&startDate=${startDate.toISOString()}&endDate=${endDate.toISOString()}&numOfGuests=${numOfGuests}`,
+              }}
+              onClick={() => setInput("")}
+              className="flex-grow text-red-400"
+            >
               Search
             </Link>
           </div>
