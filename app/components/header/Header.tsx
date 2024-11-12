@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import SearchBar from "@/app/components/header/SearchBar";
+import Navbar from "@/app/components/header/Navbar";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 bg-yellow-200 shadow-md py-4">
-      <div className="container">
+    <header className="sticky top-0 z-50 bg-white shadow-md py-4">
+      <div className="container grid grid-cols-3">
         <Link href={"/"} className="relative flex items-center h-10 my-auto">
           <Image
             alt="logo-img"
@@ -15,6 +17,8 @@ const Header = () => {
             className="object-contain object-left"
           />
         </Link>
+        <SearchBar />
+        <Navbar />
       </div>
     </header>
   );
