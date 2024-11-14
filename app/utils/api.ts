@@ -19,3 +19,13 @@ export const getLive = async () => {
     //logging in the server side (in  the terminal on the local machine)
   }
 };
+
+export const getSearchResults = async () => {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/b/5NPS`);
+    const searchResultData = await res.json();
+    return searchResultData;
+  } catch (error) {
+    console.log(error);
+  }
+};
